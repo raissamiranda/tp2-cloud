@@ -1,0 +1,29 @@
+# Tornar a aplicacao acessivel
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: playlist-recommendation-service
+  namespace: raissamaciel
+spec:
+  selector:
+    app: frontend-container-raissamaciel
+  ports:
+  - protocol: TCP
+    port: 52056
+    targetPort: 52056
+  type: ClusterIP
+
+
+
+
+
+## Proximos comandos:
+# kubectl apply -f deployment.yaml
+# Cria uma implantacao baseada no arquivo deployment.yaml
+# Gera os pods que rodam a aplicacao
+# Cada pod contem o container da aplicacao frontend
+
+# kubectl apply -f service.yaml
+# Cria um servico que conecta as requisicoes externas aos pods criados pelo deployment
+# Garante que se os pods forem movidos o acesso a aplicacao continue funcionando
