@@ -14,7 +14,7 @@ spec:
         image: quay.io/raissamaciel/ml-container:4.0
         env:
         - name: DATASET
-          value: "/app/datasets/2023_spotify_ds2.csv"  # Indica o dataset a ser usado, alterar para "dsX" conforme necessário
+          value: "/app/datasets/2023_spotify_ds1.csv"  # Indica o dataset a ser usado, alterar para "dsX" conforme necessário
         volumeMounts:
         - mountPath: /folder
           name: persistent-storage
