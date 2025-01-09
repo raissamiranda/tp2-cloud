@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: ml-job-ds1
+  name: ml-job-ds2
   namespace: raissamaciel
 spec:
   template:
