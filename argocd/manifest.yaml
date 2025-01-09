@@ -1,0 +1,12 @@
+project: raissamaciel-project
+source:
+  repoURL: https://github.com/raissamiranda/tp2-cloud
+  path: .
+  targetRevision: HEAD
+destination:
+  server: https://kubernetes.default.svc
+  namespace: raissamaciel
+syncPolicy:
+  automated:
+    prune: true
+    selfHeal: true

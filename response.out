@@ -1,11 +1,19 @@
 {
   "model_date": "2025-01-06",
   "songs": [
+<<<<<<< HEAD
     "T-Shirt",
     "goosebumps",
     "Bounce Back",
     "Caroline",
     "XO TOUR Llif3"
+=======
+    "Black Beatles",
+    "T-Shirt",
+    "Bounce Back",
+    "Broccoli (feat. Lil Yachty)",
+    "Congratulations"
+>>>>>>> 69ee0cdb609e733036cbcccca1fac72c2cde93fb
   ],
   "version": "1.0"
 }
