@@ -1,0 +1,32 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-job-ds1
+  namespace: raissamaciel
+spec:
+  template:
+    metadata:
+      labels:
+        app: ml-job-raissamaciel
+    spec:
+      containers:
+      - name: ml-container-raissamaciel
+        image: quay.io/raissamaciel/ml-container:4.0
+        env:
+        - name: DATASET
+          value: "/app/datasets/2023_spotify_ds1.csv"  # Indica o dataset a ser usado, alterar para "dsX" conforme necessário
+        volumeMounts:
+        - mountPath: /folder
+          name: persistent-storage
+        - mountPath: /app/datasets
+          name: dataset-volume
+      restartPolicy: Never
+      volumes:
+      - name: dataset-volume
+        hostPath:
+          path: /home/datasets/spotify
+          type: Directory
+      - name: persistent-storage
+        persistentVolumeClaim:
+          claimName: pvc-raissamaciel
+  backoffLimit: 4

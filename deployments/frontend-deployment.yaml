@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deployment
+  namespace: raissamaciel
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend-container-raissamaciel
+  template:
+    metadata:
+      labels:
+        app: frontend-container-raissamaciel
+    spec:
+      containers:
+      - name: frontend-container-raissamaciel
+        image: quay.io/raissamaciel/frontend-container:3.0
+        ports:
+        - containerPort: 52056
+        volumeMounts:
+        - mountPath: /folder
+          name: persistent-storage
+      volumes:
+      - name: persistent-storage
+        persistentVolumeClaim:
+          claimName: pvc-raissamaciel
