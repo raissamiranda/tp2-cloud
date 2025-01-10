@@ -11,7 +11,7 @@ MODEL_PATH = "/folder/association_rules.pkl"
 
 # Variáveis globais
 VERSION = "1.0"
-MODEL_DATE = "2025-01-06"  # Atualize com a data do modelo
+MODEL_DATE = "2025-01-06"
 
 # Carregar o modelo
 try:
