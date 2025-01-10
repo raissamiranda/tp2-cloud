@@ -46,4 +46,4 @@ output_path = "/folder/association_rules.pkl"
 with open(output_path, 'wb') as f:
     pickle.dump(rules, f)
 
-print(f"\nRegras de associação salvas no arquivo '{output_path}'.")
+print(f"\nRegras de associação salvas no caminho '{output_path}'.")
