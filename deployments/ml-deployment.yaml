@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
       - name: ml-container-raissamaciel
-        image: quay.io/raissamaciel/ml-container:6.0
+        image: quay.io/raissamaciel/ml-container:6.0 
         env:
         - name: DATASET
           value: "/app/datasets/2023_spotify_ds1.csv"  # Indica o dataset a ser usado, alterar para "dsX" conforme necessário
